@@ -1,26 +1,28 @@
 # Overview of NLP
+CS 4395.001: Human Language Technologies
+Hannah Valena, HCV180000
 
-## What is NLP?
-NLP is ...
+### What is NLP?
+Natural Language Processing, abbreviated as NLP, describes how computers interpret and interact with the human language. This includes human language that is spoken and written, and it aims to both understand generate natural human language using linguistics and a variety of techniques.
 
-## Relationship between AI and NLP
+### Relationship between AI and NLP
 The relationship ...
 
-## Examples of modern NLP applications
+### Examples of modern NLP applications
 Some examples...
 
-## The 3 main approaches to NLP
-### Approach 1: 
+### The 3 main approaches to NLP
+#### Approach 1: 
 The first approach is...
 Some examples are ...
 
-### Approach 2:
+#### Approach 2:
 The second approach is...
 Some examples are ...
 
-### Aproach 3:
+#### Aproach 3:
 The third approach is...
 Some examples are ...
 
-## My interest in NLP
+### My interest in NLP
 My interest...
