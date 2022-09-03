@@ -29,14 +29,8 @@ class Person:
 def process_input(text_input):
     """
     :param text_input: list of lines in the input file
-    :return: dictionary of Persons, where the key is id
-
-    Processes the input file to make the text uniform
+    :return: dictionary of Persons, where the key is employee id, and Person data is standardized
     """
-
-    # type checking
-    if not type(text_input) == list:
-        return "Error: \"names\" is not a list"
 
     persons = {}
 
@@ -53,34 +47,70 @@ def process_input(text_input):
             text[2] = "X"
         mi = text[2][0].upper()
 
-        # id should be 2 letters + 4 digit
-        id_ = text[3]
-        id_pattern = "[a-zA-z]{2}[0-9]{4}"
-        while not re.fullmatch(id_pattern, id_):
-            print(f"\nID invalid: {id_}")
-            print("ID is two letters followed by 4 digits")
-            id_ = input("Please enter a valid id: ")
-        id_ = id_.upper()
+        # id should be 2 letters + 4 digits
+        id_ = verify_id(text[3], first, mi, last)
 
         # phone should be in format 999-999-9999
-        phone = text[4]
-        phone_pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
-        while not re.fullmatch(phone_pattern, phone):
-            print(f"\nPhone {phone} is invalid")
-            print(f"Enter phone number in form 123-456-7890")
-            phone = input("Enter phone number: ")
-
-        # employee data is correct
-        p = Person(last, first, mi, id_, phone)
+        phone = verify_phone(text[4], first, mi, last)
 
         # handle duplicate id
         if id_ in persons:
-            print(f'Error: id {id_} is repeated')
+            print(f'\nError: Duplicate id {id_} found for {first} {mi} {last} and '
+                  f'{persons[id_].first} {persons[id_].mi} {persons[id_].last}'
+                  f'\nPlease correct this error in the input file')
             quit()
 
+        # employee data is corrected
+        p = Person(last, first, mi, id_, phone)
         persons[id_] = p
 
     return persons
+
+
+def verify_id(id_, first, mi, last):
+    """
+    :param id_: employee's id to be verified
+    :param first: employee's first name
+    :param mi: employee's middle initial
+    :param last: employee's last name
+    :return: a valid formatted id
+    """
+
+    id_pattern = "[a-zA-z]{2}[0-9]{4}"
+    while not re.fullmatch(id_pattern, id_):
+        print(f"\nID invalid: {id_} for {first} {mi} {last}")
+        print("ID is two letters followed by 4 digits")
+        id_ = input("Please enter a valid id: ")
+    return id_.upper()
+
+
+def verify_phone(phone, first, mi, last):
+    """
+    :param phone: employee's phone number to be verified
+    :param first: employee's first name
+    :param mi: employee's middle initial
+    :param last: employee's last name
+    :return: a valid formatted phone number
+    """
+
+    phone_pattern_correct = r"[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    while not re.fullmatch(phone_pattern_correct, phone):
+        print(f"\nPhone {phone} is invalid format for {first} {mi} {last}")
+
+        # correct the format of phone numbers (eg 1234567890, 123 456 7890, (123) 456 7890, +1 (123) 456 7890, etc.)
+        phone_pattern_any = r"(\+[0-9]+)?[ ]?(\(?[0-9]{3}\)?)[ -.]?([0-9]{3})[ -.]?([0-9]{4})"
+        result = re.search(phone_pattern_any, phone)
+
+        if result: # enough digits to reformat phone number
+            phone_reformatted = f"{result.group(2)}-{result.group(3)}-{result.group(4)}"
+            correct = input(f"Phone number reformatted to {phone_reformatted}\n"
+                            f"Is this correct (Y/N)? ")
+
+        if result and "y" in correct.lower():
+            phone = phone_reformatted
+        else:  # not enough digits in phone number or incorrect reformat
+            phone = input("Enter phone number in format 999-999-9999: ")
+    return phone
 
 
 if __name__ == '__main__':
