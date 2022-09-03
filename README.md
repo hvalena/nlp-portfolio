@@ -9,7 +9,8 @@ You can find an [Overview of NLP here](Overview-Of-NLP.pdf)!
 This program reads and processes a csv file of employee data. It makes the information more standardized by using
 some basic regex expressions and text processing.  
   
-You can find the [assignment description here](Homework1/portfolio-component-1-instructions.pdf).
+You can find the [assignment description here](Homework1/portfolio-component-1-instructions.pdf) and the
+[Homework 1 folder here](Homework1).
 ### How to run the program
 You can run this program either from a terminal or in an IDE, like PyCharm:
 #### Running from the terminal
