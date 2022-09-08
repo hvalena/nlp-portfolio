@@ -29,4 +29,9 @@ processing with Python, but I know that Python's dynamic typing can lead to slow
 languages.
 ### What I learned in this assignment
 In this assignment, I learned how to use sysarg, open/read files regardless of OS, write classes, and use regex in
-Python. I also learned that pickle files make it easier to save data structures to a file. 
+Python. I also learned that pickle files make it easier to save data structures to a file.  
+  
+## :telescope: Assignment 2: Exploring NLTK
+This assignment explores Python's Natural Language Toolkit using Google Colab Notebook.  
+  
+You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb)
