@@ -1,10 +1,10 @@
 # nlp-portfolio
 This repository is my portfolio for CS 4395.001: Human Language Technologies, taken in Fall 2022 with Dr. Karen Mazidi.
 
-## :seedling: Assignment 0: Getting Started
+## 🌱 Assignment 0: Getting Started
 You can find an [Overview of NLP here](Overview-Of-NLP.pdf)! 
 
-## :speech_balloon: Assignment 1: Text Processing with Python
+## 📝 Assignment 1: Text Processing with Python
 ### Program overview
 This program reads and processes a csv file of employee data. It makes the information more standardized by using
 some basic regex expressions and text processing.  
@@ -31,7 +31,7 @@ languages.
 In this assignment, I learned how to use sysarg, open/read files regardless of OS, write classes, and use regex in
 Python. I also learned that pickle files make it easier to save data structures to a file.  
   
-## :telescope: Assignment 2: Exploring NLTK
+## 🚀 Assignment 2: Exploring NLTK
 This assignment explores Python's Natural Language Toolkit using Google Colab Notebook.  
   
 You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb)
