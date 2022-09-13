@@ -37,4 +37,9 @@ Python. I also learned that pickle files make it easier to save data structures 
 ## 🚀 Assignment 2: Exploring NLTK
 This assignment explores Python's Natural Language Toolkit using Google Colab Notebook.  
   
-You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb).
+You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb).  
+  
+## 🧐 Assignment 3: Word Guessing Game
+This assignment uses Python and NLTK features to explore a text file and create a word guessing game!  
+  
+You can find the [assignment description here](Homework3/cs4395-001-assignment3-instructions.pdf).
