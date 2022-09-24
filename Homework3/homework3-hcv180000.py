@@ -85,17 +85,17 @@ def play_guessing_game(words):
         print(f'\nYour score is: {points}')
         print('Your word is: ' + word_guess)
         print('Letters already guessed: ' + ' '.join(guessed_letters))
-        letter_guess = input('Guess a letter: ')
-
-        # invalid input
-        while len(letter_guess) != 1 or not letter_guess.isalpha() or letter_guess in guessed_letters:
-            letter_guess = input('You must guess 1 letter at a time. You cannot repeat guesses. '
-                                 'Please enter another guess: ')
+        letter_guess = input('Guess a letter: ').lower()
 
         # end guessing game
         if letter_guess == '!':
             print(f'\nEnding the guessing game. Your final score is {points}. The word was {word}.')
             break
+
+        # invalid input
+        while len(letter_guess) != 1 or not letter_guess.isalpha() or letter_guess in guessed_letters:
+            letter_guess = input('You must guess 1 letter at a time. You cannot repeat guesses. '
+                                 'Please enter another guess: ')
 
         guessed_letters.append(letter_guess)
 
