@@ -1,3 +1,7 @@
+# Homework 3
+# Hannah Valena - HCV180000
+# CS 4395.001: Human Language Technologies
+
 import sys
 import nltk
 import re
@@ -10,6 +14,11 @@ from random import randint
 
 
 def preprocess_text(text_raw):
+    """
+    :param text_raw: raw text from the input file
+    :return: a tuple containing a list of preprocessed tokens and a list of nouns
+    """
+
     print(f'\nPreprocessing text...')
 
     tokens_text = nltk.word_tokenize(text_raw)
@@ -47,7 +56,11 @@ def preprocess_text(text_raw):
     return tokens_pp, nouns
 
 
-def start_guessing_game(words):
+def play_guessing_game(words):
+    """
+    :param words: 50 most common nouns in the input file, one is chosen randomly for each game
+    :return: n/a
+    """
     print('\nLet\'s play a guessing game!')
     print('-' * 100)
     print('Rules: ')
@@ -62,11 +75,9 @@ def start_guessing_game(words):
     seed(datetime.now().timestamp())
     idx = randint(0, 50)
     word = words[idx]
+
     points = 5
-
     word_guess = '_ ' * len(word)
-    print(f'DEBUG {word}')
-
     guessed_letters = []
 
     # start guessing
@@ -113,12 +124,12 @@ def start_guessing_game(words):
                 print(f'\nYou failed. Your final score is {points}. The word was {word}.')
                 break
 
-            print(f'Wrong. Sorry, guess again.')
+            print(f'Wrong. Sorry, try again.')
 
     # play another game
-    is_play_again = input('Would you like to play again? Y/N: ')
-    if "y" in is_play_again.lower():
-        start_guessing_game(words)
+    play_again = input('Would you like to play again? Y/N: ')
+    if "y" in play_again.lower():
+        play_guessing_game(words)
     else:
         print('Thanks for playing!')
 
@@ -152,12 +163,11 @@ if __name__ == '__main__':
     # print and save 50 most common nouns
     print(f'\n50 most common nouns and their occurrences: ')
     num = 1
-    nouns_common = []
-    for noun in sorted(noun_dict, key=noun_dict.get, reverse=True)[:50]:
-        nouns_common.append(noun)
+    nouns_common = sorted(noun_dict, key=noun_dict.get, reverse=True)[:50]
+    for noun in nouns_common:
         print(f'\t{num}. {noun}, {noun_dict.get(noun)}')
         num += 1
 
     # guessing game
-    start_guessing_game(nouns_common)
+    play_guessing_game(nouns_common)
 
