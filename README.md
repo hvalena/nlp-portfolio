@@ -39,7 +39,19 @@ This assignment explores Python's Natural Language Toolkit using Google Colab No
   
 You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb).  
   
-## 🧐 Assignment 3: Word Guessing Game
+## ❓ Assignment 3: Word Guessing Game
 This assignment uses Python and NLTK features to explore a text file and create a word guessing game!  
   
-You can find the [assignment description here](Homework3/cs4395-001-assignment3-instructions.pdf).
+You can find the [assignment description here](Homework3/cs4395-001-assignment3-instructions.pdf), the [Homework 3 folder here](Homework3), the [Homework 3 Python script here](Homework3/homework3-hcv180000.py), and a [screenshot of a sample run (word = chordae) here](Homework3/homework3-sample-run-chordae.png).
+  
+### How to run the program
+You can run this program either from a terminal or in an IDE, like PyCharm:
+#### Running from the terminal
+1. Navigate to the directory where this program is stored
+2. Run: `$ python3 homework3-hcv180000.py anat19.txt`  
+
+#### Running from an IDE (PyCharm)
+1. Open the directory where this program is stored in your IDE
+2. Add a new run/debug configuration with the path to [homework3-hcv180000.py](Homework3/homework3-hcv180000.py) as 
+the script path and [anat19.txt](Homework3/anat19.txt) as a parameter
+3. Select this newly created run configuration and run the program
