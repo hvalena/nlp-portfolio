@@ -55,3 +55,8 @@ You can run this program either from a terminal or in an IDE, like PyCharm:
 2. Add a new run/debug configuration with the path to [homework3-hcv180000.py](Homework3/homework3-hcv180000.py) as 
 the script path and [anat19.txt](Homework3/anat19.txt) as a parameter
 3. Select this newly created run configuration and run the program
+
+## 🌐 Assignment 4: Exploring WordNet 
+This assignment explores WordNet and SentiWordNet to extract and analyze synsets.  
+  
+You can find the [assignment description here](Homework4/homework4-instructions.pdf), the [Homework 4 folder here](Homework4), and the [Homework 4 Google Colab notebook here](Homework4/cs4395_001_assignment4_hcv180000.ipynb).
