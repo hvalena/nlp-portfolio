@@ -28,13 +28,13 @@ def create_dicts(filename):
 def main():
     # test files and directory
     ngram_file_path = 'ngram_files/'
-    train_files = ['LangId.train.English','LangId.train.French', 'LangId.train.Italian']
+    train_files = ['LangId.train.English', 'LangId.train.French', 'LangId.train.Italian']
 
-    # create a folder for our dictionaries if it doesnt exists
+    # create a folder for our dictionaries if it doesn't exist
     if not os.path.exists('dicts'):
         os.makedirs('dicts')
     
-    # create dictionries from train files
+    # create dictionaries from train files
     for file in train_files:
         language = file.split(".")[2]
 
