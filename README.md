@@ -60,3 +60,37 @@ the script path and [anat19.txt](Homework3/anat19.txt) as a parameter
 This assignment explores WordNet and SentiWordNet to extract and analyze synsets.  
   
 You can find the [assignment description here](Homework4/homework4-instructions.pdf), the [Homework 4 folder here](Homework4), and the [Homework 4 Google Colab notebook here](Homework4/cs4395_001_assignment4_hcv180000.ipynb).
+
+## 🇮🇹 Assignment 5: Ngrams
+This assignment creates ngrams from training data and builds language models from the created ngrams. Language models for 3 languages are built
+from the training data: English, French, and Italian. Then, these models are used to predict the language of each line in the testing data. 
+The accuracy of the models is calculated by comparing a predictions file with a solutions file. I collaborated with [Ryan Dimaranan](https://github.com/ryannd) for this
+assignment, and the accuracy of our predictions was 98.33%.  
+  
+This assignment was split into 2 programs. The first program builds the language models and pickles them, and the second program uses these
+training models to predict languages in the testing data. We split the assignment into 2 programs to save time on predictions
+since NLTK ngrams() in program 1 is very slow.  
+  
+You can find the:
+- [assignment description here](Homework5/cs4395-001-assignment5-instructions.pdf)
+- [Homework 5 folder here](Homework5)
+- [training, testing, predictions, and solutions datasets here](Homework5/ngrams/ngram_files)
+- [training models created from program 1 here](Homework5/ngrams/dicts)
+- [program 1 here](Homework5/ngrams/program_1.py)
+- [program 2 here](Homework5/ngrams/program_2.py)
+- [more info about ngrams here](Homework5) TODO
+
+### How to run the program
+You can run this program either from a terminal or in an IDE, like PyCharm:
+#### Running from the terminal
+1. Navigate to the directory where the programs are stored
+2. Run: `$ python3 program_1.py`
+3. Run: `$ python3 program_2.py`
+
+#### Running from an IDE (PyCharm)
+1. Open the directory where this program is stored in your IDE
+2. Add a new run/debug configuration with the path to [program_1.py](Homework5/ngrams/program_1.py) as 
+the script path.
+3. Select this newly created run configuration and run program 1
+4. Repeat steps 2-3 for [program_2.py](Homework5/ngrams/program_2.py)
+
