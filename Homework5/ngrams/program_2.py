@@ -1,9 +1,9 @@
 # CS 4395.001 Portfolio Chapter 8: Ngrams
 # Written by: Ryan Dimaranan and Hannah Valena
+
 import os
 import pickle
 import re
-
 from nltk import word_tokenize, ngrams
 
 
@@ -39,11 +39,11 @@ def calculate_accuracy(predictions, solutions):
 
 
 def main():
-    # store each pickled dict based on language and uni/bi-grams
+    # create dicts
     uni_english, uni_italian, uni_french = {}, {}, {}
     bi_english, bi_italian, bi_french = {}, {}, {}
 
-    # read in pickled dictionaries from dicts directory
+    # read in pickled dicts
     pickle_dir = 'dicts/'
     for filename in os.listdir(pickle_dir):
         # read pickled dicts
@@ -74,16 +74,16 @@ def main():
     with open(ngram_files_dir + 'LangId.test', 'r') as f_test, open(ngram_files_dir + 'LangId.pred', 'a') as f_pred:
         # preprocess test file
         lines_test = f_test.read().lower()
-        lines_test = re.sub(r'[^a-zA-Z0-9\s]', '', lines_test)
+        lines_test = re.sub(r'[^a-zA-Z0-9\s]', '', lines_test).splitlines()
 
         # calculate language probability for each line in test file
         i = 1
-        for line in lines_test.splitlines():
+        for line in lines_test:
             english_prob = calculate_lang_prob(line, uni_english, bi_english, vocab_size)
             italian_prob = calculate_lang_prob(line, uni_italian, bi_italian, vocab_size)
             french_prob = calculate_lang_prob(line, uni_french, bi_french, vocab_size)
 
-            # take highest probability as the predicted language
+            # take the highest probability as the predicted language
             highest_prob = max(english_prob, italian_prob, french_prob)
             predicted_lang = ''
             if highest_prob == english_prob:
