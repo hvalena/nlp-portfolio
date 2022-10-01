@@ -69,14 +69,17 @@ def main():
     # total vocabulary size
     vocab_size = len(uni_english) + len(uni_french) + len(uni_italian)
 
-    # open test file and solution file
+    # open test file and create predictions file
     ngram_files_dir = 'ngram_files/'
-    with open(ngram_files_dir + 'LangId.test', 'r') as f_test, open(ngram_files_dir + 'LangId.pred', 'a') as f_pred:
+    predictions_file = ngram_files_dir + 'LangId.pred'
+    test_file = ngram_files_dir + 'LangId.test'
+    with open(test_file, 'r') as f_test, open(predictions_file, 'a') as f_pred:
         # preprocess test file
         lines_test = f_test.read().lower()
         lines_test = re.sub(r'[^a-zA-Z0-9\s]', '', lines_test).splitlines()
 
         # calculate language probability for each line in test file
+        print(f'Calculating language probabilities for each line in {test_file}...')
         i = 1
         for line in lines_test:
             english_prob = calculate_lang_prob(line, uni_english, bi_english, vocab_size)
@@ -97,9 +100,11 @@ def main():
             f_pred.write(f'{i} {predicted_lang}\n')
             i += 1
 
+        print(f'Stored language predictions in {predictions_file}.')
+
     # calculate accuracy of predictions
-    accuracy, incorrect_lines = calculate_accuracy(ngram_files_dir + 'LangId.pred', ngram_files_dir + 'LangId.sol')
-    print('The language predictions were {:.2f}% correct.'.format(accuracy * 100))
+    accuracy, incorrect_lines = calculate_accuracy(predictions_file, ngram_files_dir + 'LangId.sol')
+    print('\nThe language predictions are {:.2f}% correct.'.format(accuracy * 100))
     print(f'The line numbers of the incorrect predictions are: {incorrect_lines}')
 
 
