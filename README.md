@@ -78,7 +78,7 @@ You can find the:
 - [training models created from program 1 here](Homework5/ngrams/dicts)
 - [program 1 here](Homework5/ngrams/program_1.py)
 - [program 2 here](Homework5/ngrams/program_2.py)
-- [more info about ngrams here](Homework5) TODO
+- [more info about ngrams here](Homework5/ngrams_narrative.pdf)
 
 ### How to run the program
 You can run this program either from a terminal or in an IDE, like PyCharm:
