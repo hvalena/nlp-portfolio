@@ -9,8 +9,8 @@ You can find an [Overview of NLP here](Overview-Of-NLP.pdf)!
 This program reads and processes a csv file of employee data. It makes the information more standardized by using
 some basic regex expressions and text processing.  
   
-You can find the [assignment description here](Homework1/portfolio-component-1-instructions.pdf), the
-[Homework 1 folder here](Homework1), and the [Homework 1 python script here](Homework1/homework1-hcv180000.py).
+You can find the [assignment description here](Homework1-TextProcessing/portfolio-component-1-instructions.pdf), the
+[Homework 1 folder here](Homework1-TextProcessing), and the [Homework 1 python script here](Homework1-TextProcessing/homework1-hcv180000.py).
 ### How to run the program
 You can run this program either from a terminal or in an IDE, like PyCharm:
 #### Running from the terminal
@@ -19,8 +19,8 @@ You can run this program either from a terminal or in an IDE, like PyCharm:
 
 #### Running from an IDE (PyCharm)
 1. Open the directory where this program is stored in your IDE
-2. Add a new run/debug configuration with the path to [homework1-hcv180000.py](Homework1/homework1-hcv180000.py) as 
-the script path and [data/data.csv](Homework1/data/data.csv) as a parameter
+2. Add a new run/debug configuration with the path to [homework1-hcv180000.py](Homework1-TextProcessing/homework1-hcv180000.py) as 
+the script path and [data/data.csv](Homework1-TextProcessing/data/data.csv) as a parameter
 3. Select this newly created run configuration and run the program  
 
 ### Strengths & weaknesses of Python for text processing
@@ -37,12 +37,12 @@ Python. I also learned that pickle files make it easier to save data structures 
 ## 🚀 Assignment 2: Exploring NLTK
 This assignment explores Python's Natural Language Toolkit using Google Colab Notebook.  
   
-You can find the [assignment description here](Homework2/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2), and the [Homework 2 Google Colab notebook here](Homework2/cs4395_001_assignment2_hcv180000.ipynb).  
+You can find the [assignment description here](Homework2-ExploringNLTK/portfolio-component2-instructions.pdf), the [Homework 2 folder here](Homework2-ExploringNLTK), and the [Homework 2 Google Colab notebook here](Homework2-ExploringNLTK/cs4395_001_assignment2_hcv180000.ipynb).  
   
 ## ❓ Assignment 3: Word Guessing Game
 This assignment uses Python and NLTK features to explore a text file and create a word guessing game!  
   
-You can find the [assignment description here](Homework3/cs4395-001-assignment3-instructions.pdf), the [Homework 3 folder here](Homework3), the [Homework 3 Python script here](Homework3/homework3-hcv180000.py), and a [screenshot of a sample run (word = chordae) here](Homework3/homework3-sample-run-chordae.png).
+You can find the [assignment description here](Homework3-GuessingGame/cs4395-001-assignment3-instructions.pdf), the [Homework 3 folder here](Homework3-GuessingGame), the [Homework 3 Python script here](Homework3-GuessingGame/homework3-hcv180000.py), and a [screenshot of a sample run (word = chordae) here](Homework3-GuessingGame/homework3-sample-run-chordae.png).
   
 ### How to run the program
 You can run this program either from a terminal or in an IDE, like PyCharm:
@@ -52,14 +52,14 @@ You can run this program either from a terminal or in an IDE, like PyCharm:
 
 #### Running from an IDE (PyCharm)
 1. Open the directory where this program is stored in your IDE
-2. Add a new run/debug configuration with the path to [homework3-hcv180000.py](Homework3/homework3-hcv180000.py) as 
-the script path and [anat19.txt](Homework3/anat19.txt) as a parameter
+2. Add a new run/debug configuration with the path to [homework3-hcv180000.py](Homework3-GuessingGame/homework3-hcv180000.py) as 
+the script path and [anat19.txt](Homework3-GuessingGame/anat19.txt) as a parameter
 3. Select this newly created run configuration and run the program
 
 ## 🌐 Assignment 4: Exploring WordNet 
 This assignment explores WordNet and SentiWordNet to extract and analyze synsets.  
   
-You can find the [assignment description here](Homework4/homework4-instructions.pdf), the [Homework 4 folder here](Homework4), and the [Homework 4 Google Colab notebook here](Homework4/cs4395_001_assignment4_hcv180000.ipynb).
+You can find the [assignment description here](Homework4-WordNet/homework4-instructions.pdf), the [Homework 4 folder here](Homework4-WordNet), and the [Homework 4 Google Colab notebook here](Homework4-WordNet/cs4395_001_assignment4_hcv180000.ipynb).
 
 ## 🇮🇹 Assignment 5: Ngrams
 This assignment creates ngrams from training data and builds language models from the created ngrams. Language models for 3 languages are built
@@ -72,13 +72,13 @@ training models to predict languages in the testing data. We split the assignmen
 since NLTK ngrams() in program 1 is very slow.  
   
 You can find the:
-- [assignment description here](Homework5/cs4395-001-assignment5-instructions.pdf)
-- [Homework 5 folder here](Homework5)
-- [training, testing, predictions, and solutions datasets here](Homework5/ngrams/ngram_files)
-- [training models created from program 1 here](Homework5/ngrams/dicts)
-- [program 1 here](Homework5/ngrams/program_1.py)
-- [program 2 here](Homework5/ngrams/program_2.py)
-- [more info about ngrams here](Homework5/ngrams_narrative.pdf)
+- [assignment description here](Homework5-NgramLanguagePrediction/cs4395-001-assignment5-instructions.pdf)
+- [Homework 5 folder here](Homework5-NgramLanguagePrediction)
+- [training, testing, predictions, and solutions datasets here](Homework5-NgramLanguagePrediction/ngrams/ngram_files)
+- [training models created from program 1 here](Homework5-NgramLanguagePrediction/ngrams/dicts)
+- [program 1 here](Homework5-NgramLanguagePrediction/ngrams/program_1.py)
+- [program 2 here](Homework5-NgramLanguagePrediction/ngrams/program_2.py)
+- [more info about ngrams here](Homework5-NgramLanguagePrediction/ngrams_narrative.pdf)
 
 ### How to run the program
 You can run this program either from a terminal or in an IDE, like PyCharm:
@@ -89,8 +89,30 @@ You can run this program either from a terminal or in an IDE, like PyCharm:
 
 #### Running from an IDE (PyCharm)
 1. Open the directory where this program is stored in your IDE
-2. Add a new run/debug configuration with the path to [program_1.py](Homework5/ngrams/program_1.py) as 
+2. Add a new run/debug configuration with the path to [program_1.py](Homework5-NgramLanguagePrediction/ngrams/program_1.py) as 
 the script path.
 3. Select this newly created run configuration and run program 1
-4. Repeat steps 2-3 for [program_2.py](Homework5/ngrams/program_2.py)
+4. Repeat steps 2-3 for [program_2.py](Homework5-NgramLanguagePrediction/ngrams/program_2.py)
+
+## Assignment 6: Web Crawler
+This assignment crawls a starter URL for related links, scrapes text from these links, cleans the scraped text, finds keywords from the cleaned text,
+and builds a knowledge base for the key terms using the cleaned text. I collaborated with [Ryan Dimaranan](https://github.com/ryannd) for this project.  
+  
+You can find the:
+- [assignment description here](Homework6-WebCrawler/WebCrawler-Assignment-Instructions.pdf)
+- [Homework 6 folder here](Homework6-WebCrawler)
+- [program here](Homework6-WebCrawler/web_crawler.py)
+- [knowledge base creation document here](Homework6-WebCrawler/WebCrawler-KnowledgeBase.pdf)  
+  
+### How to run the program
+You can run this program either from a terminal or in an IDE, like PyCharm:
+#### Running from the terminal
+1. Navigate to the directory where the programs are stored
+2. Run: `$ python3 web_crawler.py`
+
+#### Running from an IDE (PyCharm)
+1. Open the directory where this program is stored in your IDE
+2. Add a new run/debug configuration with the path to [web_crawler.py](Homework6-WebCrawler/web_crawler.py) as 
+the script path.
+3. Select and run this newly created run configuration
 
