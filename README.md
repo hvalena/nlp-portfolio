@@ -94,9 +94,9 @@ the script path.
 3. Select this newly created run configuration and run program 1
 4. Repeat steps 2-3 for [program_2.py](Homework5-NgramLanguagePrediction/ngrams/program_2.py)
 
-## Assignment 6: Web Crawler
+## 🌌 Assignment 6: Web Crawler
 This assignment crawls a starter URL for related links, scrapes text from these links, cleans the scraped text, finds keywords from the cleaned text,
-and builds a knowledge base for the key terms using the cleaned text. I collaborated with [Ryan Dimaranan](https://github.com/ryannd) for this project.  
+and builds a knowledge base for the key terms using the cleaned text. I collaborated with [Ryan Dimaranan](https://github.com/ryannd) for this project, and the topic we chose was space.  
   
 You can find the:
 - [assignment description here](Homework6-WebCrawler/WebCrawler-Assignment-Instructions.pdf)
