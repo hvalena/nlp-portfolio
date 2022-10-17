@@ -116,3 +116,9 @@ You can run this program either from a terminal or in an IDE, like PyCharm:
 the script path.
 3. Select and run this newly created run configuration
 
+## 📓 Assignment 7: Syntax Parsing
+This assignment explores syntax parsing with phrase structure grammar(PSG)/constituency parsers, dependency parsers, and semantic role labeling(SRL)/shallow semantic parsers.  
+  
+You can find the:
+- [assignment description here](Homework7-SyntaxParsing/sentence-parsing-instructions.pdf)
+- [assignment work here](Homework7-SyntaxParsing/syntax-parsing-hcv180000.pdf)
