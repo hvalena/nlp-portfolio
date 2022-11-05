@@ -122,3 +122,10 @@ This assignment explores syntax parsing with phrase structure grammar(PSG)/const
 You can find the:
 - [assignment description here](Homework7-SyntaxParsing/sentence-parsing-instructions.pdf)
 - [assignment work here](Homework7-SyntaxParsing/syntax-parsing-hcv180000.pdf)
+
+## 📃 Assignment 8: ML using Sklearn
+This assignment explores machine learning using sklearn by attempting authorship attribution:  identifying the author of a document given samples of authors' work.  
+  
+You can find the:
+- [assignment description here](Homework8-AuthorAttribution/asg8-instructions.pdf)
+- [google colab notebook here](Homework8-AuthorAttribution/cs4395_001_asg8_hcv180000.ipynb)
